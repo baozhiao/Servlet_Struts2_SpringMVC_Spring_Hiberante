@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="system" extends="struts-default" namespace="/struts2">
+		<interceptors>
+			<interceptor name="login"
+				class="com.byxy.student.interceptor.LoginInterceptor" />
+			<interceptor-stack name="teamwareStack">
+				<interceptor-ref name="login" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 将上述拦截器设定为默认拦截器： -->
+		<default-interceptor-ref name="teamwareStack" />
+
+		<!-- 定义全局Result -->
+		<global-results>
+			<!-- 当返回login视图名时，转入/login.jsp页面 -->
+			<result name="login" type="redirect">/struts2/login</result>
+		</global-results>
+		<action name="login" class="com.byxy.student.action.LoginAction"
+			method="login">
+			<result name="index" type="redirectAction">index</result>
+			<result name="login">/WEB-INF/jsp/system/login.jsp</result>
+		</action>
+		<action name="logout" class="com.byxy.student.action.LoginAction"
+			method="logout">
+			<result type="redirectAction">login</result>
+		</action>
+		<action name="index">
+			<result>/WEB-INF/jsp/system/index.jsp</result>
+		</action>
+	</package>
+</struts>
