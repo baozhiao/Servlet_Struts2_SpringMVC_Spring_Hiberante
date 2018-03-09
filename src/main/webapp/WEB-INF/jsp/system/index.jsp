@@ -90,6 +90,16 @@
 									<i class="am-icon-wpforms sidebar-nav-link-logo"></i> 增加学生
 								</a>
 							</li>
+							<li class="sidebar-nav-link">
+								<a href="std/File" target="myiframe">
+									<i class="am-icon-wpforms sidebar-nav-link-logo"></i> 上传作业
+								</a>
+							</li>
+							<li class="sidebar-nav-link">
+								<a href="/springmvc/file/FileList" target="myiframe">
+									<i class="am-icon-wpforms sidebar-nav-link-logo"></i> 下载作业
+								</a>
+							</li>
 						</ul>
 					</li>
 				</ul>

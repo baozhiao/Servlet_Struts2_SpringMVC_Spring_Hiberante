@@ -71,6 +71,7 @@ public class StudentAction extends ActionSupport {
 		if ("post".equalsIgnoreCase(ServletActionContext.getRequest().getMethod())) {
 			if (person != null) {
 				studentService.addPerson(person);
+				System.out.println("222222222222222222222222222222222222222222222222222222222222222222222222222");
 			}
 			return SUCCESS;
 		} else {

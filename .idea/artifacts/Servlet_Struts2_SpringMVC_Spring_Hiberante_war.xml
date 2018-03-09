@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Servlet_Struts2_SpringMVC_Spring_Hiberante:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="struts01.war">
+      <element id="artifact" artifact-name="Servlet_Struts2_SpringMVC_Spring_Hiberante:war exploded" />
+    </root>
+  </artifact>
+</component>
